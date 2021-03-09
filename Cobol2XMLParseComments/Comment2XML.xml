@@ -1,7 +1,4 @@
-Mar 09, 2021 11:07:15 AM cobol.Cobol2XMLParseComments main
-INFO: Cobol2XML V0.1.0
-Mar 09, 2021 11:07:16 AM xmlwriter.XMLPayload writeFile
-INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <cobol>
 <division>identification</division>
 <Program-ID>base</Program-ID>
@@ -15,4 +12,3 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <comment>convert</comment>
 <comment>allineamento</comment>
 </cobol>
-
