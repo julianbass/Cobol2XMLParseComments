@@ -74,8 +74,7 @@ public class CobolParser {
 		s.add(new Symbol("-"));
 		s.add(new Symbol("-"));
 		s.add(new Symbol("-"));
-		//s.add(new Literal("***---"));
-		s.add(new QuotedString());
+		s.add(new UnquotedString());
 	
 		//Repetition r = new Repetition(new Word());
 		//System.out.println("Rep String = " + r.toString());

@@ -35,7 +35,7 @@ public class UnquotedString extends Terminal {
  */
 protected boolean qualifies(Object o) {
 	Token t = (Token) o;
-	return t.isUnquotedString();
+	return t.isQuotedString();
 }
 /**
  * Create a set with one random quoted string (with 2 to
@@ -44,11 +44,9 @@ protected boolean qualifies(Object o) {
 public ArrayList<String> randomExpansion(int maxDepth, int depth) {
 	int n = (int) (5.0 * Math.random());
 	
-	//char[] letters = new char[n + 2];
-	//letters[0] = '"';
-	//letters[n + 1] = '"';
-	
-	char[] letters = new char[n];
+	char[] letters = new char[n + 2];
+	letters[0] = '"';
+	letters[n + 1] = '"';
 	
 	for (int i = 0; i < n; i++) {
 		int c = (int) (26.0 * Math.random()) + 'a';
