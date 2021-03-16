@@ -44,6 +44,7 @@ public class Tokenizer {
 	 */
 	protected NumberState numberState = new NumberState();
 	protected QuoteState quoteState = new QuoteState();
+	protected UnquoteState unquoteState = new UnquoteState();
 	protected SlashState slashState = new SlashState();
 	protected SymbolState symbolState = new SymbolState();
 	protected WhitespaceState whitespaceState = 
@@ -126,6 +127,16 @@ public QuoteState quoteState() {
 	return quoteState;
 }
 /**
+ * Return the state this tokenizer uses to build unquoted 
+ * strings.
+ *
+ * @return  the state this tokenizer uses to build unquoted 
+ *          strings
+ */
+public UnquoteState unquoteState() {
+	return unquoteState;
+}
+/**
  * Change the state the tokenizer will enter upon reading 
  * any character between "from" and "to".
  *
@@ -171,8 +182,7 @@ public void setString(String s) {
  *                we need
  */
 public void setString(String s, int symbolMax) {
-	setReader(
-		new PushbackReader(new StringReader(s), symbolMax));
+	setReader(new PushbackReader(new StringReader(s), symbolMax));
 }
 /**
  * Return the state this tokenizer uses to recognize

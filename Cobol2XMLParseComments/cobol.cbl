@@ -59,7 +59,7 @@ main-logic.
     goback.
 
 ***---
-***---  convert from decimal to base system
+***---  "convert from decimal to base system"
 ***---
 decimal-to-base.
     move entry_number  to w_number
@@ -94,7 +94,7 @@ decimal-to-base.
 decimal-to-base-ex.
 
 ***---
-***---  convert from base to dicimal system
+***---  "convert from base to dicimal system"
 ***---
 base-to-decimal.
 

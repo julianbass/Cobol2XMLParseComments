@@ -22,7 +22,7 @@
 package parse.tokens;
 
 import java.io.*;
-public class QuoteState extends TokenizerState {
+public class UnquoteState extends TokenizerState {
 	protected char charbuf[] = new char[16];
 /*
  * Fatten up charbuf as necessary.
@@ -58,6 +58,6 @@ public Token nextToken(PushbackReader r, int cin, Tokenizer t)
 	} while (c != cin);
 	 
 	String sval = String.copyValueOf(charbuf, 0, i);
-	return new Token(Token.TT_QUOTED, sval, 0);
+	return new Token(Token.TT_UNQUOTED, sval, 0);
 }
 }

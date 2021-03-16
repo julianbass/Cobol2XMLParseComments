@@ -62,6 +62,13 @@ public class Token {
 	 */
 	public static final TokenType TT_QUOTED = 
 		new TokenType("quoted");
+	
+	/**
+	 * A constant indicating that a token is an unquoted string, 
+	 * like Launch Mi.
+	 */
+	public static final TokenType TT_UNQUOTED = 
+		new TokenType("unquoted");
 /**
  * Constructs a token from the given char.
  *
@@ -185,6 +192,16 @@ public boolean isNumber() {
 public boolean isQuotedString() {
 	return ttype == TT_QUOTED;
 }
+
+/**
+ * Returns true if this token is a quoted string.
+ *
+ * @return   true, if this token is a quoted string
+ */
+public boolean isUnquotedString() {
+	return ttype == TT_UNQUOTED;
+}
+
 /**
  * Returns true if this token is a symbol.
  *

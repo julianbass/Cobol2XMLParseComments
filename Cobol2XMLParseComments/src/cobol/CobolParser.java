@@ -21,14 +21,12 @@
 package cobol;
 
 import parse.Alternation;
+import parse.Repetition;
 import parse.Empty;
-import parse.Parser;
+import parse.*;
 import parse.Sequence;
 import parse.tokens.CaselessLiteral;
-import parse.tokens.Num;
-import parse.tokens.Symbol;
-import parse.tokens.Tokenizer;
-import parse.tokens.Word;
+import parse.tokens.*;
 
 public class CobolParser {
 	/**
@@ -76,11 +74,28 @@ public class CobolParser {
 		s.add(new Symbol("-"));
 		s.add(new Symbol("-"));
 		s.add(new Symbol("-"));
-		s.add(new Word().setAssembler(new CommentLineAssembler()) );
+		//s.add(new Literal("***---"));
+		s.add(new QuotedString());
+	
+		//Repetition r = new Repetition(new Word());
+		//System.out.println("Rep String = " + r.toString());
+		//s.add(new Repetition(s1.setAssembler(new CommentLineAssembler())));
+		//s.add(new QuotedString());
+		s.setAssembler(new CommentLineAssembler());
+		
+		//s.add(new Word().setAssembler(new CommentLineAssembler()) );
 		//Sequence s1 = new Sequence();
 		//s.add(s1.add(new Word().setAssembler(new CommentLineAssembler())) );
 		//s.setAssembler(new CommentLineAssembler());
+		
+		System.out.println("Comment String = " + s.toString());
 		return s;
+		/* original only picks up first word of comment line
+		 * s.add(new Word().setAssembler(new CommentLineAssembler()) );
+		 * return s; 
+		 * 
+		 */
+		
 	}
 
 	

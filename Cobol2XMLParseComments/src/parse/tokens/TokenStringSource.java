@@ -42,8 +42,7 @@ public class TokenStringSource {
  *            from the specified tokenizer, delimited by the 
  *            specified delimiter
  */
-public TokenStringSource (
-	Tokenizer tokenizer, String delimiter) {
+public TokenStringSource (Tokenizer tokenizer, String delimiter) {
 	
 	this.tokenizer = tokenizer;
 	this.delimiter = delimiter;

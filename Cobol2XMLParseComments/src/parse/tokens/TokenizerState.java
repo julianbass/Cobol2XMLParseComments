@@ -39,7 +39,6 @@ public abstract class TokenizerState {
  *
  * @exception   IOException   if there is any problem reading
  */
-public abstract Token nextToken(
-	PushbackReader r, int c, Tokenizer t)
+public abstract Token nextToken(PushbackReader r, int c, Tokenizer t)
 	throws IOException;
 }

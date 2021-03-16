@@ -29,8 +29,7 @@ public class SlashSlashState extends TokenizerState {
  *
  * @return the tokenizer's next token
  */
-public Token nextToken(
-	PushbackReader r, int theSlash, Tokenizer t)
+public Token nextToken(PushbackReader r, int theSlash, Tokenizer t)
 	throws IOException {
 		
 	int c;
