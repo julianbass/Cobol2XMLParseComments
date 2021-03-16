@@ -1,18 +1,6 @@
-Mar 09, 2021 11:07:15 AM cobol.Cobol2XMLParseComments main
+Mar 16, 2021 3:05:30 PM cobol.Cobol2XMLParseComments main
 INFO: Cobol2XML V0.1.0
-Mar 09, 2021 11:07:16 AM xmlwriter.XMLPayload writeFile
+Mar 16, 2021 3:05:31 PM xmlwriter.XMLPayload writeFile
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<cobol>
-<division>identification</division>
-<Program-ID>base</Program-ID>
-<day-date-written>7</day-date-written>
-<month-date-written>mar</month-date-written>
-<year-date-written>1995</year-date-written>
-<division>data</division>
-<section>working-storage</section>
-<division>procedure</division>
-<comment>convert</comment>
-<comment>convert</comment>
-<comment>allineamento</comment>
-</cobol>
+<cobol/>
 
