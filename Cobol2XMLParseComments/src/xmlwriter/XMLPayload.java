@@ -95,7 +95,7 @@ public class XMLPayload {
 		
 		/*
 		 *  add divisionName element
-		 */		
+		 */
 		String divisionName = c.getDivisionName();
 		if (divisionName != null) {
 			this.addDivisionElement( divisionName );
