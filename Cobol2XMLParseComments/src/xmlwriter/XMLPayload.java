@@ -72,6 +72,7 @@ public class XMLPayload {
 		 *  add commentLine element
 		 */		
 		String commentLine = c.getCommentLine();
+		System.out.println("Got Comment" + commentLine);
 		if (commentLine != null) {
 			this.addCommentLineElement( commentLine );
 			//System.out.println("Got Section");

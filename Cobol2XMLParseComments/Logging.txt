@@ -1,6 +1,8 @@
-Mar 16, 2021 3:07:43 PM cobol.Cobol2XMLParseComments main
+Mar 16, 2021 3:25:06 PM cobol.Cobol2XMLParseComments main
 INFO: Cobol2XML V0.1.0
-Mar 16, 2021 3:07:43 PM xmlwriter.XMLPayload writeFile
+Mar 16, 2021 3:25:07 PM xmlwriter.XMLPayload writeFile
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<cobol/>
+<cobol>
+<comment>"convert from decimal to base system"</comment>
+</cobol>
 

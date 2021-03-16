@@ -14,18 +14,14 @@ public class CommentLineAssembler extends Assembler {
 		 */
 		public void workOn(Assembly a) {
 			String commentString = null;
-			Stack stack = a.getStack();
-			System.out.println("Stack = " + stack.toString());
+			
 			Cobol c = new Cobol();
-			while( a.hasMoreElements() ) {
-				Token t = (Token) a.pop();
-				if(t.sval() != null) {
-					commentString = commentString + t.sval();
-					System.out.println("comment string = " + commentString);
-					} // end if
-				} // end while
+			Token t = (Token) a.pop();
+			if(t.sval() != null) {
+				commentString = t.sval();
+				} // end if
+			
 			c.setCommentLine(commentString);
 			a.setTarget(c);
-			System.out.println("commentLineAssembler - end");
 		}
 }
